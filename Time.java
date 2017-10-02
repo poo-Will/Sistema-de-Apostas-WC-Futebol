@@ -1,11 +1,10 @@
+import java.util.Random;
 
 public class Time implements INTERTIME{
 
 	private String Nome;
 	private int QuantGols;
 	private String Estadio;
-	
-
 
 	public String GetNome(){
 		return this.Nome;
@@ -36,5 +35,15 @@ public class Time implements INTERTIME{
 	public String toString(){
 		return "Nome:" +this.Nome+ " QuantGols:" +this.QuantGols+ " Estadio:" +this.Estadio;
 	}
+
+	
+	public int QuantGols() {
+		Random r = new Random();
+		QuantGols = r.nextInt(10);
+		
+		return QuantGols;
+	}
+	
+	public 
 	
 }
