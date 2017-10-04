@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -36,31 +37,25 @@ public class Principal extends JFrame {
 
 
 	public Principal() {
+		setTitle("Sistema de Apostas WC");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 602, 401);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Sistema de Apostas WC");
-		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 14));
-		lblNewLabel.setBounds(100, 40, 229, 36);
-		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Fazer Aposta");
 		btnNewButton.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 11));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//frame.dispose();
-				
 				FazerFicha a = new FazerFicha();
 				a.setVisible(true);
+				dispose();
 			}
 		});
-		btnNewButton.setBounds(137, 87, 120, 23);
+		btnNewButton.setBounds(241, 135, 120, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Sair");
@@ -69,13 +64,18 @@ public class Principal extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton_1.setBounds(153, 155, 89, 23);
+		btnNewButton_1.setBounds(257, 229, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Ver Lista De Jogos");
 		btnNewButton_2.setFont(new Font("Microsoft JhengHei UI Light", Font.BOLD, 11));
-		btnNewButton_2.setBounds(120, 121, 158, 23);
+		btnNewButton_2.setBounds(225, 180, 158, 23);
 		contentPane.add(btnNewButton_2);
+		
+		ImageIcon img = new ImageIcon("C:/Users/William/Desktop/Progeto/SistemaAposta/Sistema/src/imagens/dinheiro.jpg");
+		JLabel lbImag = new JLabel(img);
+		lbImag.setBounds(10, 0, 566, 351);
+		contentPane.add(lbImag);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {

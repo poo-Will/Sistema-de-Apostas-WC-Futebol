@@ -13,25 +13,12 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 
 public class FazerFicha extends JFrame {
-	//protected static final Window frame = null;
-	ListJogos a = new ListJogos();
+	
+	private static ListJogos a = new ListJogos();
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
 	private static FazerFicha frame;
-
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					frame = new FazerFicha();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
 
 	public FazerFicha() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,10 +56,10 @@ public class FazerFicha extends JFrame {
 				
 				apos.setNome(textField.getText());
 				apos.setTelefone(textField_1.getText());
-				//frame.dispose();
 				
 				ListaDeJogos a = new ListaDeJogos();
 				a.setVisible(true);
+				dispose();
 			}
 		});
 		btnFazerAAposta.setBounds(290, 103, 122, 23);

@@ -1,11 +1,14 @@
 import java.util.Random;
 
-public class Time implements INTERTIME{
+public class Time{
 
 	private String Nome;
 	private int QuantGols;
-	private String Estadio;
 
+	public Time(String nome){
+		this.Nome = nome;
+		gerarGols();
+	}
 	public String GetNome(){
 		return this.Nome;
 	}
@@ -18,32 +21,17 @@ public class Time implements INTERTIME{
 		return this.QuantGols;
 	}
 	
-	public int setQuantGols(){
-		return this.QuantGols = QuantGols;
-	}
-	
-	public String GetEstadio(){
-		return this.Estadio;
-	
-	}
-	
-	public String SetEstadio(){
-		return this.Estadio = Estadio;	
-		
+	public void setQuantGols(int QuantGols){
+		this.QuantGols = QuantGols;
 	}
 	
 	public String toString(){
-		return "Nome:" +this.Nome+ " QuantGols:" +this.QuantGols+ " Estadio:" +this.Estadio;
+		return "Nome:" +this.Nome+ " QuantGols:" +this.QuantGols;
 	}
 
-	
-	public int QuantGols() {
+	public void gerarGols() {
 		Random r = new Random();
 		QuantGols = r.nextInt(10);
-		
-		return QuantGols;
 	}
-	
-	public 
 	
 }
