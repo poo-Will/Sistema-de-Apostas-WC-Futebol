@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Time{
-
+	
 	private String Nome;
 	private int QuantGols;
 
@@ -9,7 +9,7 @@ public class Time{
 		this.Nome = nome;
 		gerarGols();
 	}
-	public String GetNome(){
+	public String getNome(){
 		return this.Nome;
 	}
 	
@@ -33,5 +33,6 @@ public class Time{
 		Random r = new Random();
 		QuantGols = r.nextInt(10);
 	}
+	
 	
 }

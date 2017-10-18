@@ -13,12 +13,12 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 import java.awt.Font;
 import java.awt.Color;
 
 public class Principal extends JFrame {
 	Apostador a=  new Apostador();
-	
 	private JPanel contentPane;
 	private static Principal frame;
 	
@@ -34,7 +34,7 @@ public class Principal extends JFrame {
 			}
 		});
 	}
-
+	
 
 	public Principal() {
 		setTitle("Sistema de Apostas WC");
@@ -49,8 +49,14 @@ public class Principal extends JFrame {
 		btnNewButton.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 11));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				/*InterExibeTimes IP = new InterExibeTimes(a);
+				IP.iniciarBotoes();
+				IP.alteraTextB();
+				IP.addbotoes();
+				*/
 				
 				FazerFicha a = new FazerFicha();
+				
 				a.setVisible(true);
 				dispose();
 			}
@@ -62,12 +68,22 @@ public class Principal extends JFrame {
 		btnNewButton_1.setFont(new Font("Microsoft YaHei Light", Font.BOLD, 11));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				dispose();
 			}
 		});
 		btnNewButton_1.setBounds(257, 229, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Ver Lista De Jogos");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+				
+				
+				dispose();
+			}
+		});
 		btnNewButton_2.setFont(new Font("Microsoft JhengHei UI Light", Font.BOLD, 11));
 		btnNewButton_2.setBounds(225, 180, 158, 23);
 		contentPane.add(btnNewButton_2);
