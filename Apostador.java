@@ -8,6 +8,13 @@ public class Apostador {
 	private String telefone;
 	private List<Time> apostas;
 	
+	public Apostador(String nome, String telefone){
+		
+		this.nome = nome;
+		this.telefone = telefone;
+		
+	}
+	
 	public Apostador(){
 		apostas = new ArrayList();
 	}
@@ -51,7 +58,7 @@ public class Apostador {
 	}
 	
 	public String toString(){
-		return "nome:" +this.nome+ "Telefone:" +this.telefone;
+		return "nome:" +this.nome+ "\n Telefone:" +this.telefone;
 	}
 	
 	

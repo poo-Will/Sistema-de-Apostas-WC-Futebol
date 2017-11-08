@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GerenciaDeAposta  {
 	
-	private static List<Time> listaTime = new ArrayList();
+	private static  List<Time> listaTime = new ArrayList();
 	private static List<Apostador> listApost = new ArrayList();
 	
 	public GerenciaDeAposta(){

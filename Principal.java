@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -21,6 +22,7 @@ public class Principal extends JFrame {
 	Apostador a=  new Apostador();
 	private JPanel contentPane;
 	private static Principal frame;
+	
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -49,11 +51,6 @@ public class Principal extends JFrame {
 		btnNewButton.setFont(new Font("Microsoft JhengHei Light", Font.BOLD, 11));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/*InterExibeTimes IP = new InterExibeTimes(a);
-				IP.iniciarBotoes();
-				IP.alteraTextB();
-				IP.addbotoes();
-				*/
 				
 				FazerFicha a = new FazerFicha();
 				
@@ -61,7 +58,7 @@ public class Principal extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton.setBounds(241, 135, 120, 23);
+		btnNewButton.setBounds(203, 135, 120, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Sair");
@@ -71,13 +68,19 @@ public class Principal extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton_1.setBounds(257, 229, 89, 23);
+		btnNewButton_1.setBounds(324, 203, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Ver Lista De Jogos");
+		JButton btnNewButton_2 = new JButton("Ver Lista De Apostadores");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				List Apostadores = new GerenciaDeAposta().getApostadores();
+				String AP = "Apostadores:\n";				
+				for(int k=0; k <Apostadores.size(); k++){
+					AP += Apostadores.get(k);
+					JOptionPane.showMessageDialog(null,AP);
+					
+				}
 				
 				
 				
@@ -85,7 +88,7 @@ public class Principal extends JFrame {
 			}
 		});
 		btnNewButton_2.setFont(new Font("Microsoft JhengHei UI Light", Font.BOLD, 11));
-		btnNewButton_2.setBounds(225, 180, 158, 23);
+		btnNewButton_2.setBounds(211, 169, 202, 23);
 		contentPane.add(btnNewButton_2);
 		
 		ImageIcon img = new ImageIcon("C:/Users/William/Desktop/Progeto/SistemaAposta/Sistema/src/imagens/dinheiro.jpg");

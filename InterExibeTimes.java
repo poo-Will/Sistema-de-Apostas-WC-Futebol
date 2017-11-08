@@ -27,8 +27,6 @@ public class InterExibeTimes extends JFrame {
 	
 	private Apostador p;
 	
-	//private static GerenciaDeAposta gp = new GerenciaDeAposta();
-	
 	JButton b1;
 	JButton b2;
 	JButton b3;
@@ -380,10 +378,10 @@ public class InterExibeTimes extends JFrame {
 			}
 			
 		});
-		btnNewButton.setBounds(369, 150, 153, 23);
+		btnNewButton.setBounds(356, 150, 181, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Cancelar Aposta");
+		JButton btnNewButton_1 = new JButton("Volta \u00E1 Tela Inicial");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Principal a = new Principal();
@@ -394,7 +392,7 @@ public class InterExibeTimes extends JFrame {
 			}
 		});
 		btnNewButton_1.setFont(new Font("Microsoft YaHei UI Light", Font.BOLD, 11));
-		btnNewButton_1.setBounds(369, 184, 153, 23);
+		btnNewButton_1.setBounds(356, 184, 181, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Adicionar Nova Aposta");
